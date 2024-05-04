@@ -29,8 +29,6 @@ def fetch_data_and_upload_to_s3():
     credentials = load_credentials()
 
     api_key = credentials['API_KEY']
-    aws_access_key_id = credentials['AWS_ACCESS_KEY_ID']
-    aws_secret_access_key = credentials['AWS_SECRET_ACCESS_KEY']
 
     # Request headers
     headers = {
@@ -53,10 +51,7 @@ def fetch_data_and_upload_to_s3():
         csv_buffer.seek(0)
 
         # Create an S3 client
-        session = boto3.Session(
-            aws_access_key_id=aws_access_key_id,
-            aws_secret_access_key=aws_secret_access_key,
-        )
+        session = boto3.Session()
         s3 = session.client("s3")
         
         S3_BUCKET_NAME = "opendatagoth-dw-project"
@@ -76,7 +71,7 @@ def define_dag():
         'daily_data_update',
         default_args=default_args,
         description='A DAG to update data daily',
-        schedule_interval=timedelta(days=1),
+        schedule_interval=timedelta(days=2),  # Update every 2 days
     ) as dag:
 
         fetch_data_task = PythonOperator(

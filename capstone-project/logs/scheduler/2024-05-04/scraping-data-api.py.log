@@ -254,3 +254,59 @@
 [2024-05-04T16:15:07.140+0000] {logging_mixin.py:117} INFO - [2024-05-04T16:15:07.140+0000] {dag.py:2573} INFO - Sync 1 DAGs
 [2024-05-04T16:15:07.160+0000] {logging_mixin.py:117} INFO - [2024-05-04T16:15:07.160+0000] {dag.py:3328} INFO - Setting next_dagrun for daily_data_update to 2024-05-04T00:00:00+00:00, run_after=2024-05-05T00:00:00+00:00
 [2024-05-04T16:15:07.180+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/scraping-data-api.py took 0.328 seconds
+[2024-05-04T16:15:37.773+0000] {processor.py:156} INFO - Started process (PID=7656) to work on /opt/airflow/dags/scraping-data-api.py
+[2024-05-04T16:15:37.774+0000] {processor.py:758} INFO - Processing file /opt/airflow/dags/scraping-data-api.py for tasks to queue
+[2024-05-04T16:15:37.774+0000] {logging_mixin.py:117} INFO - [2024-05-04T16:15:37.774+0000] {dagbag.py:525} INFO - Filling up the DagBag from /opt/airflow/dags/scraping-data-api.py
+[2024-05-04T16:15:38.031+0000] {processor.py:768} INFO - DAG(s) dict_keys(['daily_data_update']) retrieved from /opt/airflow/dags/scraping-data-api.py
+[2024-05-04T16:15:38.062+0000] {logging_mixin.py:117} INFO - [2024-05-04T16:15:38.061+0000] {dag.py:2573} INFO - Sync 1 DAGs
+[2024-05-04T16:15:38.081+0000] {logging_mixin.py:117} INFO - [2024-05-04T16:15:38.081+0000] {dag.py:3328} INFO - Setting next_dagrun for daily_data_update to 2024-05-04T00:00:00+00:00, run_after=2024-05-05T00:00:00+00:00
+[2024-05-04T16:15:38.100+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/scraping-data-api.py took 0.329 seconds
+[2024-05-04T16:16:09.070+0000] {processor.py:156} INFO - Started process (PID=7860) to work on /opt/airflow/dags/scraping-data-api.py
+[2024-05-04T16:16:09.071+0000] {processor.py:758} INFO - Processing file /opt/airflow/dags/scraping-data-api.py for tasks to queue
+[2024-05-04T16:16:09.071+0000] {logging_mixin.py:117} INFO - [2024-05-04T16:16:09.071+0000] {dagbag.py:525} INFO - Filling up the DagBag from /opt/airflow/dags/scraping-data-api.py
+[2024-05-04T16:16:09.309+0000] {processor.py:768} INFO - DAG(s) dict_keys(['daily_data_update']) retrieved from /opt/airflow/dags/scraping-data-api.py
+[2024-05-04T16:16:09.338+0000] {logging_mixin.py:117} INFO - [2024-05-04T16:16:09.338+0000] {dag.py:2573} INFO - Sync 1 DAGs
+[2024-05-04T16:16:09.358+0000] {logging_mixin.py:117} INFO - [2024-05-04T16:16:09.358+0000] {dag.py:3328} INFO - Setting next_dagrun for daily_data_update to 2024-05-04T00:00:00+00:00, run_after=2024-05-05T00:00:00+00:00
+[2024-05-04T16:16:09.377+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/scraping-data-api.py took 0.309 seconds
+[2024-05-04T16:16:40.372+0000] {processor.py:156} INFO - Started process (PID=8073) to work on /opt/airflow/dags/scraping-data-api.py
+[2024-05-04T16:16:40.373+0000] {processor.py:758} INFO - Processing file /opt/airflow/dags/scraping-data-api.py for tasks to queue
+[2024-05-04T16:16:40.373+0000] {logging_mixin.py:117} INFO - [2024-05-04T16:16:40.373+0000] {dagbag.py:525} INFO - Filling up the DagBag from /opt/airflow/dags/scraping-data-api.py
+[2024-05-04T16:16:40.631+0000] {processor.py:768} INFO - DAG(s) dict_keys(['daily_data_update']) retrieved from /opt/airflow/dags/scraping-data-api.py
+[2024-05-04T16:16:40.662+0000] {logging_mixin.py:117} INFO - [2024-05-04T16:16:40.662+0000] {dag.py:2573} INFO - Sync 1 DAGs
+[2024-05-04T16:16:40.684+0000] {logging_mixin.py:117} INFO - [2024-05-04T16:16:40.684+0000] {dag.py:3328} INFO - Setting next_dagrun for daily_data_update to 2024-05-04T00:00:00+00:00, run_after=2024-05-05T00:00:00+00:00
+[2024-05-04T16:16:40.703+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/scraping-data-api.py took 0.333 seconds
+[2024-05-04T16:17:11.489+0000] {processor.py:156} INFO - Started process (PID=8289) to work on /opt/airflow/dags/scraping-data-api.py
+[2024-05-04T16:17:11.490+0000] {processor.py:758} INFO - Processing file /opt/airflow/dags/scraping-data-api.py for tasks to queue
+[2024-05-04T16:17:11.491+0000] {logging_mixin.py:117} INFO - [2024-05-04T16:17:11.490+0000] {dagbag.py:525} INFO - Filling up the DagBag from /opt/airflow/dags/scraping-data-api.py
+[2024-05-04T16:17:11.780+0000] {processor.py:768} INFO - DAG(s) dict_keys(['daily_data_update']) retrieved from /opt/airflow/dags/scraping-data-api.py
+[2024-05-04T16:17:11.817+0000] {logging_mixin.py:117} INFO - [2024-05-04T16:17:11.817+0000] {dag.py:2573} INFO - Sync 1 DAGs
+[2024-05-04T16:17:11.843+0000] {logging_mixin.py:117} INFO - [2024-05-04T16:17:11.842+0000] {dag.py:3328} INFO - Setting next_dagrun for daily_data_update to 2024-05-04T00:00:00+00:00, run_after=2024-05-05T00:00:00+00:00
+[2024-05-04T16:17:11.866+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/scraping-data-api.py took 0.380 seconds
+[2024-05-04T16:17:42.740+0000] {processor.py:156} INFO - Started process (PID=8503) to work on /opt/airflow/dags/scraping-data-api.py
+[2024-05-04T16:17:42.740+0000] {processor.py:758} INFO - Processing file /opt/airflow/dags/scraping-data-api.py for tasks to queue
+[2024-05-04T16:17:42.741+0000] {logging_mixin.py:117} INFO - [2024-05-04T16:17:42.741+0000] {dagbag.py:525} INFO - Filling up the DagBag from /opt/airflow/dags/scraping-data-api.py
+[2024-05-04T16:17:42.977+0000] {processor.py:768} INFO - DAG(s) dict_keys(['daily_data_update']) retrieved from /opt/airflow/dags/scraping-data-api.py
+[2024-05-04T16:17:43.007+0000] {logging_mixin.py:117} INFO - [2024-05-04T16:17:43.007+0000] {dag.py:2573} INFO - Sync 1 DAGs
+[2024-05-04T16:17:43.027+0000] {logging_mixin.py:117} INFO - [2024-05-04T16:17:43.027+0000] {dag.py:3328} INFO - Setting next_dagrun for daily_data_update to 2024-05-04T00:00:00+00:00, run_after=2024-05-05T00:00:00+00:00
+[2024-05-04T16:17:43.048+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/scraping-data-api.py took 0.310 seconds
+[2024-05-04T16:18:13.091+0000] {processor.py:156} INFO - Started process (PID=8707) to work on /opt/airflow/dags/scraping-data-api.py
+[2024-05-04T16:18:13.092+0000] {processor.py:758} INFO - Processing file /opt/airflow/dags/scraping-data-api.py for tasks to queue
+[2024-05-04T16:18:13.092+0000] {logging_mixin.py:117} INFO - [2024-05-04T16:18:13.092+0000] {dagbag.py:525} INFO - Filling up the DagBag from /opt/airflow/dags/scraping-data-api.py
+[2024-05-04T16:18:13.341+0000] {processor.py:768} INFO - DAG(s) dict_keys(['daily_data_update']) retrieved from /opt/airflow/dags/scraping-data-api.py
+[2024-05-04T16:18:13.371+0000] {logging_mixin.py:117} INFO - [2024-05-04T16:18:13.371+0000] {dag.py:2573} INFO - Sync 1 DAGs
+[2024-05-04T16:18:13.390+0000] {logging_mixin.py:117} INFO - [2024-05-04T16:18:13.390+0000] {dag.py:3328} INFO - Setting next_dagrun for daily_data_update to 2024-05-04T00:00:00+00:00, run_after=2024-05-05T00:00:00+00:00
+[2024-05-04T16:18:13.412+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/scraping-data-api.py took 0.325 seconds
+[2024-05-04T16:18:44.265+0000] {processor.py:156} INFO - Started process (PID=8923) to work on /opt/airflow/dags/scraping-data-api.py
+[2024-05-04T16:18:44.265+0000] {processor.py:758} INFO - Processing file /opt/airflow/dags/scraping-data-api.py for tasks to queue
+[2024-05-04T16:18:44.266+0000] {logging_mixin.py:117} INFO - [2024-05-04T16:18:44.266+0000] {dagbag.py:525} INFO - Filling up the DagBag from /opt/airflow/dags/scraping-data-api.py
+[2024-05-04T16:18:44.535+0000] {processor.py:768} INFO - DAG(s) dict_keys(['daily_data_update']) retrieved from /opt/airflow/dags/scraping-data-api.py
+[2024-05-04T16:18:44.567+0000] {logging_mixin.py:117} INFO - [2024-05-04T16:18:44.567+0000] {dag.py:2573} INFO - Sync 1 DAGs
+[2024-05-04T16:18:44.593+0000] {logging_mixin.py:117} INFO - [2024-05-04T16:18:44.593+0000] {dag.py:3328} INFO - Setting next_dagrun for daily_data_update to 2024-05-04T00:00:00+00:00, run_after=2024-05-05T00:00:00+00:00
+[2024-05-04T16:18:44.615+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/scraping-data-api.py took 0.353 seconds
+[2024-05-04T16:19:02.691+0000] {processor.py:156} INFO - Started process (PID=9012) to work on /opt/airflow/dags/scraping-data-api.py
+[2024-05-04T16:19:02.692+0000] {processor.py:758} INFO - Processing file /opt/airflow/dags/scraping-data-api.py for tasks to queue
+[2024-05-04T16:19:02.693+0000] {logging_mixin.py:117} INFO - [2024-05-04T16:19:02.693+0000] {dagbag.py:525} INFO - Filling up the DagBag from /opt/airflow/dags/scraping-data-api.py
+[2024-05-04T16:19:02.982+0000] {processor.py:768} INFO - DAG(s) dict_keys(['daily_data_update']) retrieved from /opt/airflow/dags/scraping-data-api.py
+[2024-05-04T16:19:03.073+0000] {logging_mixin.py:117} INFO - [2024-05-04T16:19:03.073+0000] {dag.py:2573} INFO - Sync 1 DAGs
+[2024-05-04T16:19:03.097+0000] {logging_mixin.py:117} INFO - [2024-05-04T16:19:03.097+0000] {dag.py:3328} INFO - Setting next_dagrun for daily_data_update to 2024-05-04T00:00:00+00:00, run_after=2024-05-06T00:00:00+00:00
+[2024-05-04T16:19:03.122+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/scraping-data-api.py took 0.434 seconds
