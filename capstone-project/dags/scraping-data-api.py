@@ -5,6 +5,7 @@ import pandas as pd
 import requests
 import boto3
 from io import StringIO
+import json
 import os
 
 default_args = {
@@ -17,11 +18,19 @@ default_args = {
     'retry_delay': timedelta(minutes=5),
 }
 
+def load_credentials():
+    # Load credentials from JSON file
+    with open('credentials.json') as f:
+        credentials = json.load(f)
+    return credentials
+
 def fetch_data_and_upload_to_s3():
     # Function to fetch data and upload to S3
-    api_key = os.getenv('API_KEY')
-    aws_access_key_id = os.getenv('AWS_ACCESS_KEY_ID')
-    aws_secret_access_key = os.getenv('AWS_SECRET_ACCESS_KEY')
+    credentials = load_credentials()
+
+    api_key = credentials['API_KEY']
+    aws_access_key_id = credentials['AWS_ACCESS_KEY_ID']
+    aws_secret_access_key = credentials['AWS_SECRET_ACCESS_KEY']
 
     # Request headers
     headers = {
