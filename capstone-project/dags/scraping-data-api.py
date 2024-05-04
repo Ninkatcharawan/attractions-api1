@@ -29,6 +29,8 @@ def fetch_data_and_upload_to_s3():
     credentials = load_credentials()
 
     api_key = credentials['API_KEY']
+    aws_access_key_id = credentials['AWS_ACCESS_KEY_ID']
+    aws_secret_access_key = credentials['AWS_SECRET_ACCESS_KEY']
 
     # Request headers
     headers = {
@@ -50,10 +52,6 @@ def fetch_data_and_upload_to_s3():
         df.to_csv(csv_buffer, index=False)
         csv_buffer.seek(0)
 
-        # Obtain AWS credentials from environment variables
-        aws_access_key_id = os.getenv('AWS_ACCESS_KEY_ID')
-        aws_secret_access_key = os.getenv('AWS_SECRET_ACCESS_KEY')
-
         # Create an S3 client
         session = boto3.Session(
             aws_access_key_id=aws_access_key_id,
@@ -71,6 +69,7 @@ def fetch_data_and_upload_to_s3():
         print("Data saved to S3 bucket:", s3_filename)
     else:
         print("Failed to retrieve data from the API")
+
 
 
 def define_dag():
