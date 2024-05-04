@@ -50,8 +50,15 @@ def fetch_data_and_upload_to_s3():
         df.to_csv(csv_buffer, index=False)
         csv_buffer.seek(0)
 
+        # Obtain AWS credentials from environment variables
+        aws_access_key_id = os.getenv('AWS_ACCESS_KEY_ID')
+        aws_secret_access_key = os.getenv('AWS_SECRET_ACCESS_KEY')
+
         # Create an S3 client
-        session = boto3.Session()
+        session = boto3.Session(
+            aws_access_key_id=aws_access_key_id,
+            aws_secret_access_key=aws_secret_access_key,
+        )
         s3 = session.client("s3")
         
         S3_BUCKET_NAME = "opendatagoth-dw-project"
@@ -64,6 +71,7 @@ def fetch_data_and_upload_to_s3():
         print("Data saved to S3 bucket:", s3_filename)
     else:
         print("Failed to retrieve data from the API")
+
 
 def define_dag():
     # Function to define the DAG
