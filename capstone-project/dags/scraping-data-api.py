@@ -5,6 +5,7 @@ import pandas as pd
 import requests
 import boto3
 from io import StringIO
+from airflow.providers.amazon.aws.operators.lambda_function import AwsLambdaInvokeFunctionOperator
 import json
 import os
 
@@ -20,7 +21,7 @@ default_args = {
 
 def load_credentials():
     # Load credentials from JSON file
-    with open('credentials.json') as f:
+    with open('/path/to/credentials.json') as f:
         credentials = json.load(f)
     return credentials
 
@@ -69,22 +70,30 @@ def fetch_data_and_upload_to_s3():
         print("Data saved to S3 bucket:", s3_filename)
     else:
         print("Failed to retrieve data from the API")
-
-
-
 def define_dag():
     # Function to define the DAG
     with DAG(
-        'daily_data_update',
+        'quarterly_lambda_trigger',
         default_args=default_args,
-        description='A DAG to update data daily',
-        schedule_interval=timedelta(days=2),  # Update every 2 days
+        description='A DAG to trigger Lambda function quarterly',
+        schedule_interval='0 10 */3 * *',  # Run at 10:00 AM on the 1st day of every 3rd month
+        tags=['DS525']  
     ) as dag:
 
+        # First task scheduled at 10:00 AM
         fetch_data_task = PythonOperator(
             task_id='fetch_data_and_upload_to_s3',
             python_callable=fetch_data_and_upload_to_s3,
         )
+
+        # Second task scheduled at 11:00 AM
+        invoke_lambda_function = AwsLambdaInvokeFunctionOperator(
+            task_id='setup__invoke_lambda_function',
+            function_name='dw-project-nink',
+            # payload=SAMPLE_EVENT,
+        )
+
+        fetch_data_task >> invoke_lambda_function
 
     return dag
 
