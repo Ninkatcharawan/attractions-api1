@@ -3,27 +3,27 @@
 # Capstone Project Documentation
 By
 Saranporn Kanjanasukhon 65199160202
-
 Atcharawan Kamsai 65199160206
 
 
 
 # Table of Contents
-Introduction	
-Technologies Used:	
-Data Warehouse and Business Intelligence Capstone Project Details	
-1.	Diagram Data Pipeline	
-2.	Workflow Description:	
-3.	Problem	
-4.	Data Modeling	
-5.	Cloud Platform used in this project	
-6.	Data Ingestion and Orchestration:	
-7.	Data Warehouse	
-8.	Data Transformation 
-9.	Dashboard	
-
-
-
+Introduction	2
+Technologies Used:	3
+Data Warehouse and Business Intelligence Capstone Project Details	3
+1.	Diagram Data Pipeline	3
+2.	Workflow Description:	4
+3.	Problem	4
+4.	Data Modeling	5
+5.	Cloud Platform used in this project	6
+6.	Data Ingestion and Orchestration:	7
+7.	Data Warehouse	8
+8.	Data Transformation The original dataset has 47 columns shown in the table	11
+9.	Dashboard	14
+10.	Instruction of Code in this project	16
+Scraping data using API and Airflow taks	17
+Cleaning data using Lambda	20
+Get data from S3 using Python Script	23
 
 
 
@@ -53,26 +53,27 @@ Project Link on GitHub: https://github.com/Ninkatcharawan/data-warehouse-final-p
 ## Data Warehouse and Business Intelligence Capstone Project Details
 
 ### 1.	Diagram Data Pipeline
-![alt text](image-11.png)
 
+
+ 
 ### 2.	Workflow Description:
 ##### Data Scraping and Storage: 
+
 We will develop Python code to scrape data from the provided API. 
 
 Airflow will be configured to run the scraping job periodically, storing the collected data in an S3 bucket on AWS. 
 
 ##### Data Cleaning and Storage: 
 
-A second Airflow job will be set up to trigger a Lambda function upon data arrival in the S3 bucket.
+A second Airflow job will be set up to trigger a Lambda function upon data arrival in the S3 bucket. 
 
 The Lambda function will execute data cleaning tasks and save the processed data to a different S3 bucket. 
 
 ##### Data Visualization: 
 
-Python scripts will facilitate the connection between the cleaned data in S3 and Power BI.
+Python scripts will facilitate the connection between the cleaned data in S3 and Power BI. 
 
 Power BI will be utilized to create interactive visualizations based on the collected and cleaned data.
-
 ### 3.	Problem
 The government, organizations involved in national development and income, as well as the public, must be able to view a summary of the revenue that the government is able to collect each year. This will allow the government to implement various revenue collection policies in a more targeted manner, and citizens can also see the government's performance through the monthly or annual revenue summaries. The government's revenue data must be collected from all agencies that directly generate revenue for the government, including various deductions that occur. Therefore, there should be a good and updatable data collection method in place so that the government's revenue can be summarized monthly or annually in an easily accessible manner.
 
@@ -167,3 +168,7 @@ Data Visualization:
 •	Power BI will be utilized to create interactive visualizations based on the collected and cleaned data.
  ![alt text](image-10.png)
 Link: https://app.powerbi.com/view?r=eyJrIjoiYTk1MWJlYTAtNTg4MC00OWE3LWJhNWQtZmM3Y2MyYzRjNTI1IiwidCI6ImY5MGM0NjQ3LTg4NmYtNGI0Yy1iMmViLTU1NWRmOWVjNGU4MSIsImMiOjEwfQ%3D%3D 
+
+
+
+
