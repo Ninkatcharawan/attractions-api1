@@ -37,3 +37,45 @@
 [2024-05-09T15:17:13.996+0000] {logging_mixin.py:117} INFO - [2024-05-09T15:17:13.995+0000] {dag.py:2573} INFO - Sync 1 DAGs
 [2024-05-09T15:17:14.026+0000] {logging_mixin.py:117} INFO - [2024-05-09T15:17:14.026+0000] {dag.py:3328} INFO - Setting next_dagrun for quarterly_lambda_trigger to 2024-04-01T10:00:00+00:00, run_after=2024-04-04T10:00:00+00:00
 [2024-05-09T15:17:14.060+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/scraping-data-api.py took 0.604 seconds
+[2024-05-09T15:17:44.193+0000] {processor.py:156} INFO - Started process (PID=1243) to work on /opt/airflow/dags/scraping-data-api.py
+[2024-05-09T15:17:44.193+0000] {processor.py:758} INFO - Processing file /opt/airflow/dags/scraping-data-api.py for tasks to queue
+[2024-05-09T15:17:44.194+0000] {logging_mixin.py:117} INFO - [2024-05-09T15:17:44.194+0000] {dagbag.py:525} INFO - Filling up the DagBag from /opt/airflow/dags/scraping-data-api.py
+[2024-05-09T15:17:44.603+0000] {processor.py:768} INFO - DAG(s) dict_keys(['quarterly_lambda_trigger']) retrieved from /opt/airflow/dags/scraping-data-api.py
+[2024-05-09T15:17:44.621+0000] {logging_mixin.py:117} INFO - [2024-05-09T15:17:44.621+0000] {dag.py:2573} INFO - Sync 1 DAGs
+[2024-05-09T15:17:44.640+0000] {logging_mixin.py:117} INFO - [2024-05-09T15:17:44.640+0000] {dag.py:3328} INFO - Setting next_dagrun for quarterly_lambda_trigger to 2024-04-01T10:00:00+00:00, run_after=2024-04-04T10:00:00+00:00
+[2024-05-09T15:17:44.657+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/scraping-data-api.py took 0.467 seconds
+[2024-05-09T15:18:14.774+0000] {processor.py:156} INFO - Started process (PID=1459) to work on /opt/airflow/dags/scraping-data-api.py
+[2024-05-09T15:18:14.774+0000] {processor.py:758} INFO - Processing file /opt/airflow/dags/scraping-data-api.py for tasks to queue
+[2024-05-09T15:18:14.775+0000] {logging_mixin.py:117} INFO - [2024-05-09T15:18:14.775+0000] {dagbag.py:525} INFO - Filling up the DagBag from /opt/airflow/dags/scraping-data-api.py
+[2024-05-09T15:18:15.138+0000] {processor.py:768} INFO - DAG(s) dict_keys(['quarterly_lambda_trigger']) retrieved from /opt/airflow/dags/scraping-data-api.py
+[2024-05-09T15:18:15.155+0000] {logging_mixin.py:117} INFO - [2024-05-09T15:18:15.155+0000] {dag.py:2573} INFO - Sync 1 DAGs
+[2024-05-09T15:18:15.174+0000] {logging_mixin.py:117} INFO - [2024-05-09T15:18:15.174+0000] {dag.py:3328} INFO - Setting next_dagrun for quarterly_lambda_trigger to 2024-04-01T10:00:00+00:00, run_after=2024-04-04T10:00:00+00:00
+[2024-05-09T15:18:15.193+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/scraping-data-api.py took 0.422 seconds
+[2024-05-09T15:18:45.767+0000] {processor.py:156} INFO - Started process (PID=1665) to work on /opt/airflow/dags/scraping-data-api.py
+[2024-05-09T15:18:45.768+0000] {processor.py:758} INFO - Processing file /opt/airflow/dags/scraping-data-api.py for tasks to queue
+[2024-05-09T15:18:45.769+0000] {logging_mixin.py:117} INFO - [2024-05-09T15:18:45.769+0000] {dagbag.py:525} INFO - Filling up the DagBag from /opt/airflow/dags/scraping-data-api.py
+[2024-05-09T15:18:46.114+0000] {processor.py:768} INFO - DAG(s) dict_keys(['quarterly_lambda_trigger']) retrieved from /opt/airflow/dags/scraping-data-api.py
+[2024-05-09T15:18:46.136+0000] {logging_mixin.py:117} INFO - [2024-05-09T15:18:46.135+0000] {dag.py:2573} INFO - Sync 1 DAGs
+[2024-05-09T15:18:46.166+0000] {logging_mixin.py:117} INFO - [2024-05-09T15:18:46.166+0000] {dag.py:3328} INFO - Setting next_dagrun for quarterly_lambda_trigger to 2024-04-01T10:00:00+00:00, run_after=2024-04-04T10:00:00+00:00
+[2024-05-09T15:18:46.187+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/scraping-data-api.py took 0.423 seconds
+[2024-05-09T15:19:16.537+0000] {processor.py:156} INFO - Started process (PID=1870) to work on /opt/airflow/dags/scraping-data-api.py
+[2024-05-09T15:19:16.538+0000] {processor.py:758} INFO - Processing file /opt/airflow/dags/scraping-data-api.py for tasks to queue
+[2024-05-09T15:19:16.538+0000] {logging_mixin.py:117} INFO - [2024-05-09T15:19:16.538+0000] {dagbag.py:525} INFO - Filling up the DagBag from /opt/airflow/dags/scraping-data-api.py
+[2024-05-09T15:19:16.866+0000] {processor.py:768} INFO - DAG(s) dict_keys(['quarterly_lambda_trigger']) retrieved from /opt/airflow/dags/scraping-data-api.py
+[2024-05-09T15:19:16.889+0000] {logging_mixin.py:117} INFO - [2024-05-09T15:19:16.888+0000] {dag.py:2573} INFO - Sync 1 DAGs
+[2024-05-09T15:19:16.921+0000] {logging_mixin.py:117} INFO - [2024-05-09T15:19:16.921+0000] {dag.py:3328} INFO - Setting next_dagrun for quarterly_lambda_trigger to 2024-04-01T10:00:00+00:00, run_after=2024-04-04T10:00:00+00:00
+[2024-05-09T15:19:16.944+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/scraping-data-api.py took 0.410 seconds
+[2024-05-09T15:19:47.325+0000] {processor.py:156} INFO - Started process (PID=2083) to work on /opt/airflow/dags/scraping-data-api.py
+[2024-05-09T15:19:47.326+0000] {processor.py:758} INFO - Processing file /opt/airflow/dags/scraping-data-api.py for tasks to queue
+[2024-05-09T15:19:47.326+0000] {logging_mixin.py:117} INFO - [2024-05-09T15:19:47.326+0000] {dagbag.py:525} INFO - Filling up the DagBag from /opt/airflow/dags/scraping-data-api.py
+[2024-05-09T15:19:47.638+0000] {processor.py:768} INFO - DAG(s) dict_keys(['quarterly_lambda_trigger']) retrieved from /opt/airflow/dags/scraping-data-api.py
+[2024-05-09T15:19:47.669+0000] {logging_mixin.py:117} INFO - [2024-05-09T15:19:47.669+0000] {dag.py:2573} INFO - Sync 1 DAGs
+[2024-05-09T15:19:47.702+0000] {logging_mixin.py:117} INFO - [2024-05-09T15:19:47.702+0000] {dag.py:3328} INFO - Setting next_dagrun for quarterly_lambda_trigger to 2024-04-01T10:00:00+00:00, run_after=2024-04-04T10:00:00+00:00
+[2024-05-09T15:19:47.725+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/scraping-data-api.py took 0.402 seconds
+[2024-05-09T15:20:18.153+0000] {processor.py:156} INFO - Started process (PID=2297) to work on /opt/airflow/dags/scraping-data-api.py
+[2024-05-09T15:20:18.154+0000] {processor.py:758} INFO - Processing file /opt/airflow/dags/scraping-data-api.py for tasks to queue
+[2024-05-09T15:20:18.155+0000] {logging_mixin.py:117} INFO - [2024-05-09T15:20:18.155+0000] {dagbag.py:525} INFO - Filling up the DagBag from /opt/airflow/dags/scraping-data-api.py
+[2024-05-09T15:20:18.454+0000] {processor.py:768} INFO - DAG(s) dict_keys(['quarterly_lambda_trigger']) retrieved from /opt/airflow/dags/scraping-data-api.py
+[2024-05-09T15:20:18.476+0000] {logging_mixin.py:117} INFO - [2024-05-09T15:20:18.476+0000] {dag.py:2573} INFO - Sync 1 DAGs
+[2024-05-09T15:20:18.499+0000] {logging_mixin.py:117} INFO - [2024-05-09T15:20:18.499+0000] {dag.py:3328} INFO - Setting next_dagrun for quarterly_lambda_trigger to 2024-04-01T10:00:00+00:00, run_after=2024-04-04T10:00:00+00:00
+[2024-05-09T15:20:18.519+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/scraping-data-api.py took 0.369 seconds
