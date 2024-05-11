@@ -9,18 +9,20 @@ Atcharawan Kamsai 65199160206
 
 
 # Table of Contents
-Introduction	
-Technologies Used:	
-Data Warehouse and Business Intelligence Capstone Project Details	
-1.	Diagram Data Pipeline	
-2.	Workflow Description:	
-3.	Problem	
-4.	Data Modeling	
-5.	Cloud Platform used in this project	
-6.	Data Ingestion and Orchestration:	
-7.	Data Warehouse	
-8.	Data Transformation 
-9.	Dashboard	
+- Introduction	
+
+- Technologies Used	
+
+- Data Warehouse and Business Intelligence Capstone Project Details	
+    1.	Diagram Data Pipeline	
+    2.	Workflow Description:	
+    3.	Problem	
+    4.	Data Modeling	
+    5.	Cloud Platform used in this project	
+    6.	Data Ingestion and Orchestration:	
+    7.	Data Warehouse	
+    8.	Data Transformation 
+    9.	Dashboard	
 
 
 
@@ -37,7 +39,9 @@ Data Warehouse and Business Intelligence Capstone Project Details
 
 
 ## Capstone Project Documentation
-Introduction:
+
+##### Introduction:
+
 In this project, we aim to gather income data from the Thailand government's open data portal (https://data.go.th/dataset/income2) using their provided API (https://opend.data.go.th/register_api/login.php). We will utilize GitHub Codespaces for code development and Airflow for workflow orchestration, deploying them within Docker containers. The collected data will be stored in an AWS S3 bucket, updated quarterly through scheduled Airflow jobs. Additionally, we'll implement a second Airflow job to trigger a Lambda function for data cleaning and storage in a separate S3 bucket. Lastly, we'll establish a connection between the cleaned data in S3 and Power BI for visualization purposes.
 
 ## Technologies Used:
@@ -81,14 +85,19 @@ the data modeling or schema for tables related to revenue and expenses in a data
  
 #### 1)	revenue table: 
 •	This table stores revenue data for the government or an organization.
+
 •	It has columns for id, government Agency (likely the agency/department generating the revenue), month (a numerical representation of the month), month_name (the name of the month), month_year (the year associated with the month), value (the actual revenue amount), variable (possibly a category or type of revenue), and year.
+
 •	There is also a calculated field total_revenue which would sum up the revenue amounts.
 #### 2)	Date table: 
 •	This appears to be a separate dimension or lookup table related to dates.
+
 •	It has fields for Date (ldate format), Month (numerical month), Monthnum (another representation of the month number), and Year.
+
 •	This table could be used to join with the revenue and expenses tables to provide additional date-related information or filters.
 #### 3)	expenses table: 
 •	This table stores expense or deduction data for the government or organization.
+
 •	It has columns for id, deduct (category or type of deduction/expense), month (numerical month), month_name, month_year, value (the expense amount), variable (expense category), and year.
 The presence of separate revenue and expenses tables, along with the Date dimension table, this type of data modeling is used in data warehousing, allowing for efficient querying and analysis of revenue and expense data across different dimensions like time, agency/department, and expense/revenue categories.
 
@@ -103,14 +112,18 @@ Bucker 2: opendata-dw-procject-cleaned, it’s data that already cleaned.
 ##### AWS Lambda : Use for Transform data 
  
 #### 6.	Data Ingestion and Orchestration:
-Workflow Orchestration with Airflow:
+
+###### Workflow Orchestration with Airflow:
+
 To manage the end-to-end data pipeline effectively, we leveraged Apache Airflow for workflow orchestration. Airflow allows us to define, schedule, and monitor data tasks within a directed acyclic graph (DAG) framework. The following components were orchestrated using Airflow:
 
 
 #### 7.	Data Warehouse
 
 The dataset in the project exists as a single large table. To improve manageability and query performance, the data is partitioned into two separate storage locations based on specific criteria. This partitioning strategy is a critical step in organizing the dataset for further analysis.
-Data Partitioning Process with Python Code on AWS Lambda:
+
+###### Data Partitioning Process with Python Code on AWS Lambda:
+
 To partition the dataset, Python code deployed on AWS Lambda is employed. This code automates the segmentation of the dataset into two distinct partitions based on predefined criteria. By configuring separate storage locations on AWS S3, each partition is stored independently, ensuring enhanced performance and scalability. This serverless solution efficiently manages data organization, facilitating improved query performance and analysis capabilities.
 ##### 7.1 Raw Dataset:
 ![alt text](image.png)
@@ -135,29 +148,45 @@ This project uses AWS Lambda to run code that transforms data. The following ste
 
 Because it is a summary number of each organization which will be grouped later
 ##### Step 2 : Clean Data
-	Change the date format to keep only the date without the time, for example, from 1/4/2022 00:00:00 to 1/4/2022.
-	Replace NaN values in the DataFrame with 0
-	Multiplying all values by 1,000,000 serves to rescale the data, ensuring that it more accurately reflects the intended numerical values or units of measurement
+
+Change the date format to keep only the date without the time, for example, from 1/4/2022 00:00:00 to 1/4/2022.
+
+Replace NaN values in the DataFrame with 0
+
+Multiplying all values by 1,000,000 serves to rescale the data, ensuring that it more accurately reflects the intended numerical values or units of measurement
 ##### Step 3 : Transform the Data frame from a wide format to a long format
  
 ![alt text](image-7.png)
 ##### Step 4 : Split the data frame into two tables: expenses_df and revenue_df
+
 ###### 1) Table expenses_df
 o	List of variables for splitting into the expenses_df table:'vat, tax_other, vat_pay_prov, imex_comp, cu_return_dut, vat_deduct'
 o	Define a dictionary mapping old variable names to new names
-	vat: ภาษีมูลค่าเพิ่ม
-	tax_other: ภาษีอื่นๆ
-	vat_pay_prov: จัดสรรรายได้จาก VAT ให้ อบจ.
-	imex_comp: เงินชดเชยภาษีสำหรับสินค้าส่งออก
-	cu_return_dut': อากรถอนคืนกรมศุลกากร
-	vat_deduct': หักรายได้จัดสรรจาก VAT ให้ อปท. ตาม พ.ร.บ. กำหนดแผนฯ
-o	Add a new column 'deduct' with the value 'deduct'
+
+vat: ภาษีมูลค่าเพิ่ม
+
+tax_other: ภาษีอื่นๆ
+
+vat_pay_prov: จัดสรรรายได้จาก VAT ให้ อบจ
+
+imex_comp: เงินชดเชยภาษีสำหรับสินค้าส่งออก
+
+cu_return_dut': อากรถอนคืนกรมศุลกากร
+
+vat_deduct': หักรายได้จัดสรรจาก VAT ให้ อปท. ตาม พ.ร.บ. กำหนดแผนฯ
+
+Add a new column 'deduct' with the value 'deduct'
 
 ###### 2) Table revenue_df
-o	Filter variables to include rows not present in the table "expenses_df " for the "Revenue_df" table
-o	Define a dictionary mapping old variable names to new names
-o	Add a new column named 'government agencies' to categorize each variable.
-o	Define a dictionary mapping old variable names to new names
+
+Filter variables to include rows not present in the table "expenses_df " for the "Revenue_df" table
+
+Define a dictionary mapping old variable names to new names
+
+Add a new column named 'government agencies' to categorize each variable.
+
+Define a dictionary mapping old variable names to new names
+
 ![alt text](image-9.png)
  
 
