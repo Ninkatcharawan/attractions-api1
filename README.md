@@ -1,8 +1,8 @@
 # Data Warehouse and Business Intelligence Capstone Project
 
-##### Project Link on GitHub: https://github.com/Ninkatcharawan/data-warehouse-final-project/tree/a681d68338ea141190ebba905012ba5cbff8b0d8/capstone-project 
-
 #### Read Full Document: https://drive.google.com/file/d/1calACfJJnvzar0j637Qcp0WlN1clrBte/view?usp=drive_link
+
+#### Slide Presentation: https://drive.google.com/file/d/1Qc6vJgT5SHZG4Tfd3UxSVIfJZGGAtauY/view?usp=drive_link
 
 ## Authors:
 - Saranporn Kanjanasukhon 65199160202
