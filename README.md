@@ -1,5 +1,10 @@
 # Data Warehouse and Business Intelligence Capstone Project
 
+##### Project Link on GitHub: https://github.com/Ninkatcharawan/data-warehouse-final-project/tree/a681d68338ea141190ebba905012ba5cbff8b0d8/capstone-project 
+
+#### Read Full Document: https://drive.google.com/file/d/1calACfJJnvzar0j637Qcp0WlN1clrBte/view?usp=drive_link
+
+
 ## Authors:
 - Saranporn Kanjanasukhon 65199160202
 - Atcharawan Kamsai 65199160206
@@ -79,3 +84,5 @@ The government needs a summary of annual revenue collection to implement targete
 
 ### Dashboard
 - Power BI is utilized to create interactive visualizations based on the collected and cleaned data.
+
+Power BI Dashboard: https://app.powerbi.com/view?r=eyJrIjoiYTk1MWJlYTAtNTg4MC00OWE3LWJhNWQtZmM3Y2MyYzRjNTI1IiwidCI6ImY5MGM0NjQ3LTg4NmYtNGI0Yy1iMmViLTU1NWRmOWVjNGU4MSIsImMiOjEwfQ%3D%3D 
