@@ -8,12 +8,6 @@
 - Saranporn Kanjanasukhon 65199160202
 - Atcharawan Kamsai 65199160206
 
-# Data Warehouse and Business Intelligence Capstone Project
-
-## Authors:
-- Saranporn Kanjanasukhon 65199160202
-- Atcharawan Kamsai 65199160206
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Technologies Used](#technologies-used)
