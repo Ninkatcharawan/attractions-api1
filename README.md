@@ -42,7 +42,7 @@ In this project, we aim to gather income data from the Thailand government's ope
 ## Project Details
 
 ### Diagram Data Pipeline
-![Data Pipeline Diagram](image-11.png)
+![Data Pipeline Diagram](diagram.png)
 
 ### Workflow Description:
 #### Data Scraping and Storage:
