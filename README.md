@@ -4,10 +4,6 @@
 
 #### Slide Presentation: https://drive.google.com/file/d/1Qc6vJgT5SHZG4Tfd3UxSVIfJZGGAtauY/view?usp=drive_link
 
-## Authors:
-- Saranporn Kanjanasukhon 65199160202
-- Atcharawan Kamsai 65199160206
-
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Technologies Used](#technologies-used)
